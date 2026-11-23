@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biblioteca Digital UniFECAF: livros, materiais acadêmicos e conteúdos de apoio ao estudo em um só lugar.">
+  <title>Biblioteca Digital UniFECAF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- Cabeçalho e menu de navegação -->
+  <header class="topo">
+    <div class="container topo__interno">
+      <p class="marca">Biblioteca Digital <span>UniFECAF</span></p>
+      <nav aria-label="Menu principal">
+        <ul class="menu">
+          <li><a href="#biblioteca" aria-current="page">Biblioteca</a></li>
+          <li><a href="#livros">Livros</a></li>
+          <li><a href="#unidades">Unidades</a></li>
+          <li><a href="#contatos">Contatos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- Banner principal -->
+    <section class="hero" id="biblioteca">
+      <div class="container hero__grade">
+        <div class="hero__texto">
+          <h1>Bora estudar? A biblioteca da UniFECAF cabe no seu bolso!</h1>
+          <p>Encontre livros, materiais acadêmicos e conteúdos de apoio para estudar de onde você estiver.</p>
+          <a class="btn btn--verde" href="#livros">Ver livros</a>
+        </div>
+        <figure class="hero__mascote">
+          <p class="balao">Oi! Eu sou a Livi. Vem ler comigo!</p>
+          <img src="assets/imagens/mascote.svg" alt="Livi, a mascote da biblioteca: um livro azul sorridente acenando" width="360" height="400">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Sobre a biblioteca -->
+    <section class="sobre" id="sobre">
+      <div class="container">
+        <h2>Sobre a nossa biblioteca</h2>
+        <div class="sobre__grade">
+          <p>A Biblioteca Digital UniFECAF nasceu para reunir em um só lugar o acervo que o estudante precisa durante a graduação. Aqui você consulta livros, apostilas e artigos organizados por categoria.</p>
+          <figure>
+            <img src="assets/imagens/sobre.svg" alt="Ilustração em desenho animado de estantes coloridas com livros" width="600" height="400">
+          </figure>
+          <p>A plataforma foi pensada para ser simples: você visualiza os títulos disponíveis, identifica os destaques de cada área e descobre os serviços oferecidos pelas unidades, tudo pelo computador ou pelo celular.</p>
+        </div>
+        <ul class="galeria">
+          <li><img src="assets/imagens/galeria-1.svg" alt="Ícone de livro aberto representando o acervo" width="400" height="300"></li>
+          <li><img src="assets/imagens/galeria-2.svg" alt="Ícone de notebook representando o estudo online" width="400" height="300"></li>
+          <li><img src="assets/imagens/galeria-3.svg" alt="Ícone de lupa representando a pesquisa" width="400" height="300"></li>
+          <li><img src="assets/imagens/galeria-4.svg" alt="Ícone de pilha de livros representando as categorias" width="400" height="300"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Faixa de destaque -->
+    <section class="faixa" aria-label="Destaque">
+      <div class="container">
+        <p>Estudar fica bem mais leve quando o material certo está a um toque de distância!</p>
+      </div>
+    </section>
+
+    <!-- Nossos livros -->
+    <section class="livros" id="livros">
+      <div class="container">
+        <h2>Nossos livros</h2>
+        <div class="livros__grade">
+          <article class="card">
+            <div class="capa capa--1">
+              <img src="https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg" alt="Capa do livro Clean Code" width="300" height="400" loading="lazy">
+            </div>
+            <h3>Clean Code</h3>
+            <p class="autor">Robert C. Martin</p>
+            <p>Como escrever código legível, simples e fácil de manter, com exemplos práticos de refatoração.</p>
+            <a class="btn" href="https://openlibrary.org/isbn/9780132350884" target="_blank" rel="noopener" aria-label="Saiba mais sobre Clean Code (abre em nova aba)">Saiba mais</a>
+          </article>
+          <article class="card">
+            <div class="capa capa--2">
+              <img src="https://covers.openlibrary.org/b/isbn/9780132126953-L.jpg" alt="Capa do livro Computer Networks" width="300" height="400" loading="lazy">
+            </div>
+            <h3>Computer Networks</h3>
+            <p class="autor">Andrew S. Tanenbaum e David J. Wetherall</p>
+            <p>Referência clássica sobre como as redes funcionam, das camadas físicas até as aplicações.</p>
+            <a class="btn" href="https://openlibrary.org/isbn/9780132126953" target="_blank" rel="noopener" aria-label="Saiba mais sobre Computer Networks (abre em nova aba)">Saiba mais</a>
+          </article>
+          <article class="card">
+            <div class="capa capa--3">
+              <img src="https://covers.openlibrary.org/b/isbn/9780073523323-L.jpg" alt="Capa do livro Database System Concepts" width="300" height="400" loading="lazy">
+            </div>
+            <h3>Database System Concepts</h3>
+            <p class="autor">Silberschatz, Korth e Sudarshan</p>
+            <p>Modelagem de dados, SQL e o funcionamento interno dos bancos de dados.</p>
+            <a class="btn" href="https://openlibrary.org/isbn/9780073523323" target="_blank" rel="noopener" aria-label="Saiba mais sobre Database System Concepts (abre em nova aba)">Saiba mais</a>
+          </article>
+          <article class="card">
+            <div class="capa capa--4">
+              <img src="https://covers.openlibrary.org/b/isbn/9780321965516-L.jpg" alt="Capa do livro Don&#39;t Make Me Think, Revisited" width="300" height="400" loading="lazy">
+            </div>
+            <h3>Don&#39;t Make Me Think, Revisited</h3>
+            <p class="autor">Steve Krug</p>
+            <p>Princípios de usabilidade para criar sites que as pessoas entendem sem esforço.</p>
+            <a class="btn" href="https://openlibrary.org/isbn/9780321965516" target="_blank" rel="noopener" aria-label="Saiba mais sobre Don&#39;t Make Me Think, Revisited (abre em nova aba)">Saiba mais</a>
+          </article>
+          <article class="card">
+            <div class="capa capa--5">
+              <img src="https://covers.openlibrary.org/b/isbn/9781593271442-L.jpg" alt="Capa do livro Hacking: The Art of Exploitation" width="300" height="400" loading="lazy">
+            </div>
+            <h3>Hacking: The Art of Exploitation</h3>
+            <p class="autor">Jon Erickson</p>
+            <p>Como as vulnerabilidades de programas e redes funcionam, para aprender segurança na prática.</p>
+            <a class="btn" href="https://openlibrary.org/isbn/9781593271442" target="_blank" rel="noopener" aria-label="Saiba mais sobre Hacking: The Art of Exploitation (abre em nova aba)">Saiba mais</a>
+          </article>
+          <article class="card">
+            <div class="capa capa--6">
+              <img src="https://covers.openlibrary.org/b/isbn/9780385346450-L.jpg" alt="Capa do livro Scrum" width="300" height="400" loading="lazy">
+            </div>
+            <h3>Scrum</h3>
+            <p class="autor">Jeff Sutherland</p>
+            <p>Método ágil para planejar projetos e ajudar equipes a entregar mais, em menos tempo.</p>
+            <a class="btn" href="https://openlibrary.org/isbn/9780385346450" target="_blank" rel="noopener" aria-label="Saiba mais sobre Scrum (abre em nova aba)">Saiba mais</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- As unidades -->
+    <section class="unidades" id="unidades">
+      <div class="container">
+        <h2>As unidades</h2>
+        <article class="unidade">
+          <img src="assets/imagens/unidade-1.svg" alt="Ilustração da fachada da Unidade 1" width="800" height="500">
+          <div>
+            <h3>Unidade 1</h3>
+            <p>Espaço de estudo com mesas individuais e em grupo, computadores para pesquisa e atendimento de segunda a sexta.</p>
+          </div>
+        </article>
+        <article class="unidade">
+          <img src="assets/imagens/unidade-2.svg" alt="Ilustração da fachada da Unidade 2" width="800" height="500">
+          <div>
+            <h3>Unidade 2</h3>
+            <p>Acervo físico completo, salas de leitura silenciosas e orientação para consultar o material digital.</p>
+          </div>
+        </article>
+        <article class="unidade">
+          <img src="assets/imagens/unidade-3.svg" alt="Ilustração da fachada da Unidade 3" width="800" height="500">
+          <div>
+            <h3>Unidade 3</h3>
+            <p>Salas de estudo em grupo, empréstimo de notebooks e apoio da equipe para trabalhos acadêmicos.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contatos -->
+    <section class="contatos" id="contatos">
+      <div class="container">
+        <h2>Contatos</h2>
+        <div class="contatos__grade">
+          <div>
+            <p>Tem dúvidas sobre o acervo, o empréstimo de livros ou o acesso ao material digital? Fale com a equipe da biblioteca.</p>
+            <p>E-mail: biblioteca@exemplo.com.br<br>Telefone: (11) 0000-0000<br>Atendimento: segunda a sexta, das 8h às 21h</p>
+          </div>
+          <img src="assets/imagens/contato.svg" alt="Ilustração de um balão de conversa e um envelope representando o contato com a biblioteca" width="600" height="400">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Biblioteca Digital UniFECAF · Projeto acadêmico da disciplina Design Web</p>
+      <p class="creditos">Capas dos livros: Open Library (openlibrary.org). Direitos reservados aos respectivos autores e editoras.</p>
+    </div>
+  </footer>
+</body>
+</html>
