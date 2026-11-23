@@ -1,0 +1,273 @@
+/* ==========================================================
+   Biblioteca Digital UniFECAF — style.css
+   Estilo desenho animado: contornos grossos, cores fortes e
+   sombras "chapadas". Azul e verde vêm da identidade UniFECAF.
+   ========================================================== */
+
+/* 1. Variáveis (paleta, tipografia, espaçamento) */
+:root {
+  --tinta: #14213d;        /* contornos e textos */
+  --azul: #0b62a8;         /* azul UniFECAF */
+  --azul-vivo: #2f8cff;
+  --verde: #2fd08a;        /* verde UniFECAF (versão vibrante) */
+  --amarelo: #ffd23f;      /* cor de destaque dos botões e selos */
+  --ceu: #eaf5ff;
+  --branco: #ffffff;
+  --borda: 3px solid var(--tinta);
+  --sombra: 5px 5px 0 var(--tinta);
+  --raio: 20px;
+  --espaco: clamp(2.5rem, 6vw, 5rem);
+  --titulo: "Baloo 2", "Trebuchet MS", sans-serif;
+  --texto: "Nunito", "Segoe UI", Arial, sans-serif;
+}
+
+/* 2. Reset básico */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body {
+  margin: 0;
+  font-family: var(--texto);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--tinta);
+  background-color: var(--ceu);
+  background-image: radial-gradient(rgba(11, 98, 168, .2) 1.6px, transparent 1.8px);
+  background-size: 20px 20px;
+}
+img { display: block; max-width: 100%; height: auto; }
+ul { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, p, figure { margin: 0; }
+a { color: inherit; }
+
+:focus-visible { outline: 4px solid var(--tinta); outline-offset: 3px; box-shadow: 0 0 0 8px var(--amarelo); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+
+/* 3. Layout comum */
+.container { width: min(100% - 2rem, 1100px); margin-inline: auto; }
+section { padding-block: var(--espaco); }
+
+h2 {
+  display: inline-block;
+  font-family: var(--titulo);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  line-height: 1.15;
+  background: var(--amarelo);
+  border: var(--borda);
+  border-radius: 14px;
+  box-shadow: var(--sombra);
+  padding: .2rem 1.1rem;
+  margin-bottom: 2.25rem;
+  transform: rotate(-1.5deg);
+}
+
+.pular {
+  position: absolute; left: 1rem; top: -5rem;
+  background: var(--amarelo); border: var(--borda);
+  padding: .5rem 1rem; border-radius: 10px; z-index: 10;
+}
+.pular:focus { top: 1rem; }
+
+/* 4. Botões */
+.btn {
+  display: inline-block;
+  padding: .55rem 1.6rem;
+  font-family: var(--titulo);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--tinta);
+  background: var(--amarelo);
+  border: var(--borda);
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 var(--tinta);
+  transition: transform .15s, box-shadow .15s;
+}
+.btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--tinta); }
+.btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--tinta); }
+.btn--verde { background: var(--verde); }
+
+/* 5. Cabeçalho e menu */
+.topo { background: var(--azul); border-bottom: var(--borda); }
+.topo__interno {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem 2rem; padding-block: 1rem;
+}
+.marca {
+  font-family: var(--titulo); font-weight: 800; font-size: 1.3rem;
+  background: var(--amarelo); border: var(--borda); border-radius: 14px;
+  box-shadow: 4px 4px 0 var(--tinta); padding: .15rem 1rem;
+  transform: rotate(-2deg);
+}
+.menu { display: flex; flex-wrap: wrap; gap: .6rem; }
+.menu a {
+  display: block; padding: .3rem 1.1rem;
+  font-family: var(--titulo); font-weight: 700;
+  text-decoration: none; background: var(--branco);
+  border: var(--borda); border-radius: 999px;
+  transition: background .15s, transform .15s;
+}
+.menu a:hover { background: var(--amarelo); transform: translateY(-2px); }
+.menu a[aria-current="page"] { background: var(--verde); }
+
+/* 6. Banner principal (linhas de velocidade estilo mangá) */
+.hero {
+  background:
+    repeating-conic-gradient(from 0deg at 72% 50%, rgba(255,255,255,.14) 0 5deg, transparent 5deg 10deg),
+    #0a57a0;
+  border-bottom: var(--borda);
+  color: var(--branco);
+  padding-block: clamp(3rem, 8vw, 6rem);
+}
+.hero__grade {
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: 2rem; align-items: center;
+}
+.hero h1 {
+  font-family: var(--titulo); font-weight: 800;
+  font-size: clamp(2rem, 5.2vw, 3.4rem);
+  line-height: 1.1;
+  text-shadow: 3px 3px 0 var(--tinta);
+  margin-bottom: 1rem;
+}
+.hero p { max-width: 46ch; margin-bottom: 1.75rem; font-weight: 600; font-size: 1.15rem; }
+.hero__mascote { display: flex; flex-direction: column; align-items: center; }
+.hero__mascote img { width: min(100%, 300px); animation: flutuar 3s ease-in-out infinite; }
+.hero .balao {
+  position: relative; margin: 0 0 1.5rem;
+  background: var(--branco); color: var(--tinta);
+  font-family: var(--titulo); font-weight: 700; font-size: 1.15rem;
+  text-align: center; max-width: 18rem;
+  border: var(--borda); border-radius: 22px; box-shadow: var(--sombra);
+  padding: .7rem 1.2rem;
+}
+.balao::before, .balao::after {
+  content: ""; position: absolute; left: 50%; transform: translateX(-50%);
+  border-style: solid; border-color: transparent;
+}
+.balao::before { bottom: -22px; border-width: 22px 14px 0; border-top-color: var(--tinta); }
+.balao::after  { bottom: -16px; border-width: 18px 11px 0; border-top-color: var(--branco); }
+@keyframes flutuar { 50% { transform: translateY(-10px); } }
+
+/* 7. Sobre a biblioteca */
+.sobre__grade {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem; align-items: center;
+}
+.sobre__grade p {
+  background: var(--branco); border: var(--borda);
+  border-radius: var(--raio); box-shadow: var(--sombra); padding: 1.25rem;
+}
+.sobre__grade img, .galeria img { border-radius: var(--raio); box-shadow: var(--sombra); }
+.galeria {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem; margin-top: 2.5rem;
+}
+.galeria li:nth-child(odd)  { transform: rotate(-2deg); }
+.galeria li:nth-child(even) { transform: rotate(2deg); }
+
+/* 8. Faixa de destaque */
+.faixa {
+  background: repeating-linear-gradient(-45deg, var(--amarelo) 0 26px, #ffe27a 26px 52px);
+  border-block: var(--borda);
+  text-align: center;
+  padding-block: clamp(2.5rem, 7vw, 4.5rem);
+}
+.faixa p {
+  font-family: var(--titulo); font-weight: 800;
+  font-size: clamp(1.4rem, 3.4vw, 2.2rem); line-height: 1.25;
+  max-width: 26ch; margin-inline: auto;
+  background: var(--branco); border: var(--borda); border-radius: var(--raio);
+  box-shadow: var(--sombra); padding: 1rem 1.5rem;
+}
+
+/* 9. Nossos livros */
+.livros__grade {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem;
+}
+.card {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  background: var(--branco); border: var(--borda);
+  border-radius: var(--raio); box-shadow: var(--sombra);
+  padding: 1.5rem; transition: transform .2s;
+}
+.card:nth-child(odd)  { transform: rotate(-1deg); }
+.card:nth-child(even) { transform: rotate(1deg); }
+.card:hover { transform: translateY(-6px) rotate(0); }
+.capa {
+  width: 52%; aspect-ratio: 3 / 4; margin-bottom: 1rem;
+  border: var(--borda); border-radius: 10px; box-shadow: 4px 4px 0 var(--tinta);
+  overflow: hidden; background: #fff center / cover no-repeat;
+}
+.capa img { width: 100%; height: 100%; object-fit: cover; }
+/* Capa ilustrada aparece por trás caso a capa real não carregue */
+.capa--1 { background-image: url("../assets/imagens/livro-1.svg"); }
+.capa--2 { background-image: url("../assets/imagens/livro-2.svg"); }
+.capa--3 { background-image: url("../assets/imagens/livro-3.svg"); }
+.capa--4 { background-image: url("../assets/imagens/livro-4.svg"); }
+.capa--5 { background-image: url("../assets/imagens/livro-5.svg"); }
+.capa--6 { background-image: url("../assets/imagens/livro-6.svg"); }
+.autor { font-weight: 700; color: var(--azul); margin-bottom: .5rem; font-size: .95rem; }
+.card h3 { font-family: var(--titulo); font-weight: 800; font-size: 1.4rem; line-height: 1.2; margin-bottom: .5rem; }
+.card p { margin-bottom: 1.25rem; flex-grow: 1; }
+
+/* 10. As unidades */
+.unidades {
+  background:
+    radial-gradient(rgba(255,255,255,.22) 2px, transparent 2.2px) 0 0 / 22px 22px,
+    var(--azul);
+  border-block: var(--borda);
+}
+.unidade {
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.5rem; align-items: center;
+  background: var(--branco); border: var(--borda);
+  border-radius: var(--raio); box-shadow: var(--sombra); padding: 1.25rem;
+}
+.unidade + .unidade { margin-top: 2rem; }
+.unidade img { border-radius: 14px; }
+.unidade h3 { font-family: var(--titulo); font-weight: 800; font-size: 1.6rem; margin-bottom: .4rem; }
+
+/* 11. Contatos */
+.contatos { background: var(--verde); border-bottom: var(--borda); }
+.contatos__grade {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; align-items: center;
+}
+.contatos__grade > div {
+  background: var(--branco); border: var(--borda);
+  border-radius: var(--raio); box-shadow: var(--sombra); padding: 1.5rem;
+}
+.contatos__grade p + p { margin-top: 1rem; font-weight: 700; }
+.contatos__grade img { border-radius: var(--raio); box-shadow: var(--sombra); }
+
+/* 12. Rodapé */
+.rodape {
+  background: var(--tinta); color: var(--branco);
+  text-align: center; padding-block: 1.5rem; font-weight: 600;
+}
+.rodape .creditos { font-size: .85rem; font-weight: 400; margin-top: .4rem; }
+
+/* 13. Responsividade — tablet */
+@media (max-width: 900px) {
+  .hero__grade { grid-template-columns: 1fr; text-align: center; }
+  .hero p { margin-inline: auto; }
+  .sobre__grade { grid-template-columns: 1fr; }
+  .sobre__grade img { margin-inline: auto; max-width: 480px; }
+  .livros__grade { grid-template-columns: repeat(2, 1fr); }
+  .galeria { grid-template-columns: repeat(2, 1fr); }
+  .contatos__grade { grid-template-columns: 1fr; }
+  .contatos__grade img { max-width: 480px; }
+}
+
+/* 14. Responsividade — smartphone */
+@media (max-width: 600px) {
+  .topo__interno { flex-direction: column; align-items: flex-start; }
+  .livros__grade { grid-template-columns: 1fr; }
+  .card, .card:nth-child(odd), .card:nth-child(even) { transform: none; }
+  .capa { width: 45%; }
+  .unidade { grid-template-columns: 1fr; }
+  .galeria { gap: 1rem; }
+}
