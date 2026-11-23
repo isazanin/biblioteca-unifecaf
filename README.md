@@ -1,4 +1,4 @@
-# 📚 Biblioteca Digital UniFECAF
+# Biblioteca Digital UniFECAF
 
 ## Sobre o projeto
 
